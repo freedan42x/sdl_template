@@ -9,6 +9,7 @@ SRCS = $(wildcard $(SRCDIR)/*.c)
 OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c
+	mkdir -p $(@D)
 	$(CC) -c $< $(CFLAGS) $(LIBS) -o $@
 
 main: $(OBJS)
