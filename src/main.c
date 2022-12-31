@@ -52,7 +52,7 @@ int main(void)
     SDL_RenderPresent(renderer);
 
     Uint64 end = SDL_GetPerformanceCounter();
-    float elapsed = (end - start) / (float) SDL_GetPerformanceFrequency() * 1000;
+    float elapsed = (end - start) / (float) SDL_GetPerformanceFrequency();
     SDL_Delay(floor(1000.0f / FPS - elapsed));
   }
   
